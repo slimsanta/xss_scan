@@ -5,6 +5,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
 import random
 from bs4 import BeautifulSoup
+from art import text2art
+
+# Function to display ASCII art
+def display_ascii_art():
+    art_text = text2art("XSS PIMP", font='block')
+    print(art_text)
 
 # Configure logging
 logging.basicConfig(filename='xss_test_results.log', level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -87,6 +93,9 @@ def test_xss(base_url, payload, params, session=None):
 
 # Main function to drive the XSS testing
 def main():
+    # Display ASCII art
+    display_ascii_art()
+    
     # Get the target URL from the user
     base_url = input("Enter the base URL to test (e.g., http://example.com/search): ")
 
