@@ -9,7 +9,7 @@ from art import text2art
 
 # Function to display ASCII art
 def display_ascii_art():
-    art_text = text2art("XSS PIMP", font='block')
+    art_text = text2art("XSS SCAN", font='block')
     print(art_text)
 
 # Configure logging
